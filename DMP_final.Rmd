@@ -83,7 +83,7 @@ According to the Research Data Alliance (RDA) [Data Policy Standardisation and I
 
 This study investigates whether the **most reputable Open Access journals** have data sharing polices and the characteristics of those policies. These policies require authors, in some fashion, to openly disseminate the data and software underlying their published articles.
 
-Our investigation builds on the recent work of @Castro_2017 who assessed the prevalence and characteristics of data sharing policies from randomly-selected, English-language, open access journals. Their findings reveal that only a small minority of these journals have data sharing policies. These findings -- which are consistent with those of other studies [see for example, @Vasilevsky_2017] -- may be skewed because of the authors' rules of inclusion and exclusion ^[in particular, the choice to include open access journals merely because of their use of the Open Journal Systems (OJS) hosting platform; the choice to exclude non_English language journals].
+Our investigation builds on the recent work of @Castro_2017 who assessed the prevalence and characteristics of data sharing policies from randomly-selected, English-language, open access journals. Their findings reveal that only a small minority of these journals have data sharing policies. These findings -- which are consistent with those of other studies [see for example, @Vasilevsky_2017] may be skewed because of the authors' rules of inclusion and exclusion ^[in particular, the choice to include open access journals merely because of their use of the Open Journal Systems (OJS) hosting platform; the choice to exclude non_English language journals].
 
 In this study, we will include only the most reputable open access journals in our assessment  of journal sharing policies, regardless of language. We will analyze all journals that have attained the Seal of Approval from the [_**Directory of Open Access Journals, DOAJ**_](http://doaj.org) (shown below). We will apply the same coding framework devised by @Castro_2017 to the DOAJ Seal journals. We contend that a more rigorously screened population of open access journals, regardless of language, will yield a more accurate and reproducible set of findings than those published from @Castro_2017.
 
@@ -116,7 +116,7 @@ Gail Clement, Principal Investigator, `r params$institution`
 
 ## Researcher ID
 
-ORCID: 0000-0001-5494-4806
+ORCID: 0000-0003-3063-6125
 
 ## Date of First Version 
 `r format(Sys.Date()-60, '%A, %B %d, %Y')`
@@ -277,8 +277,8 @@ library('httpuv')
 
 token <- orcid_auth(scope = "/authenticate", reauth = TRUE, redirect_uri = getOption("rorcid.redirect_uri"))
 
-res <- orcid_bio(orcid = "0000-0001-5494-4806")
-bio <- res$'0000-0001-5494-4806'$'content'
+res <- orcid_bio(orcid = "0000-0003-3063-6125")
+bio <- res$'0000-0003-3063-6125'$'content'
 
 
 ```
