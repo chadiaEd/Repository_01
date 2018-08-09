@@ -1,8 +1,12 @@
 ---
 title: "Data Management Plan for the Study 'Do Reputable Open Access Journals Require Open Data Sharing'?"
-author: "YourName, YourInstitution"
+author: "Chadia ED-DRIOUCH, ENSAT"
 date: "`r format(Sys.Date(), '%A, %B %d, %Y')`"
-output: html_document
+output:
+  html_document: 
+    toc: true
+    toc_float: true
+    section_numbering : true
 ---
 
 *****
@@ -35,7 +39,7 @@ Not Applicable
 
 ## Funder
 
-This research is being submitted for funding to the J. Bohannon Foundation http://www.johnbohannon.org/.
+This research is being submitted for funding to the [J. Bohannon Foundation] (http://www.johnbohannon.org/).
 
 ## Grant Reference Number
 
@@ -43,15 +47,15 @@ Not Applicable (Proposal in preparation)
 
 ## Project Name
 
-Do Reputable Open Access Journals Require Open Data Sharing? 
+*Do Reputable Open Access Journals Require Open Data Sharing?*
 
 ### Project Description
 
-This study analyzes the submission requirements of the most reputable open access journals to determine the prevalence and characteristics of data sharing policies. This question is an important one for 21st century authors and readers because open data sharing is seen as a key component of open and more trusted scientific record.
+This study analyzes the submission requirements of the most reputable open access journals to determine the prevalence and characteristics of data sharing policies. This question is an important one for 21^st^ century authors and readers because open data sharing is seen as a key component of open and more trusted scientific record. Is time for h~2~0 break?
 
-According to the Research Data Alliance (RDA) Data Policy Standardisation and Implementation group https://www.rd-alliance.org/groups/data-policy-standardisation-and-implementation:
+According to [the Research Data Alliance (RDA) Data Policy Standardisation and Implementation group] (https://www.rd-alliance.org/groups/data-policy-standardisation-and-implementation):
 
-"the prevalence of research data policies from institutions and research funders is increasing, so publishers and editors are paying more attention to  standardisation and the wider adoption of data sharing policies."
+>"the prevalence of research data policies from institutions and research funders is increasing, so publishers and editors are paying more attention to  standardisation and the wider adoption of data sharing policies."
 
 This study investigates whether the most reputable Open Access journals have data sharing polices and the characteristics of those policies. These policies require authors, in some fashion, to openly disseminate the data and software underlying their published articles.
 
@@ -59,7 +63,7 @@ Our investigation builds on the recent work of Castro et al (2017) who assessed 
 
 In this study, we will include only the most reputable open access journals in our assessment  of journal sharing policies, regardless of language. We will analyze all journals that have attained the Seal of Approval from the Directory of Open Access Journals, DOAJ http://doaj.org (shown below). We will apply the same coding framework devised by Castro et al (2017) to the DOAJ Seal journals. We contend that a more rigorously screened population of open access journals, regardless of language, will yield a more accurate and reproducible set of findings than those published from Castro et al (2017)
 
-||> Insert DOAJ Seal of Approval images/doaj_seal_logo.png <||
+![DOAJ Seal](images/doaj_seal_logo.png)
 
 DOAJ Seal journals are considered the most reputable because they: 
 
@@ -93,7 +97,7 @@ YourName, Principal Investigator, YourInstitution
 
 Researcher ID
 
-ORCID: ||> Insert your ORCID number here <||
+ORCID:  [](https://orcid.org/0000-0003-3063-6125) 
 
 Date of First Version 
 
@@ -118,7 +122,7 @@ This study relies on the DOAJ Journal Metadata available as a csv file download 
 
 This data will be read into RStudio, using the tidyverse package (need to cite Tidyverse somehow) to filter it for those journals awarded the DOAJ Seal, and to remove unneeded columns containing the web addresses for journal policies around plagiarism, submission fees, and other urls not related to this study.
 
-The filtered version of the data set will be exported as a new file named doaj_seal.csv for importing into analytical software.
+The filtered version of the data set will be exported as a new file named `doaj_seal.csv` for importing into analytical software.
 
 
 A sample of the doaj_seal.csv data set is shown below.  The complete data set is available in searchable and  broweseable format in the  [Annex](#annex-table) near the end of this document.
@@ -133,29 +137,29 @@ knitr::kable(head(doaj_seal, 4), caption = 'A Table of the first 4 rows of the D
 
 The doaj_seal.csv data set currently includes over 1000 reputable open access journals that we will investigate in this study. The data set will be copied and enhanced with additional columns, resulting in the processed data set, doaj_seal_enhanced.csv. The following columns will be added to doaj_seal.csv, in conformance with the Coding Framework of Castro et al (2017).
 
-'Data Policy'  (Boolean)
-Yes
-No
+1. 'Data Policy' (Boolean)
+    a. Yes
+    b. No
 
-'Data Sharing Policy' (Factor)
-No mention 
-Implied
-Mentioned
-Explicitly encouraged
-Required, but not explicitly tied to editorial decisions
-Required as a condition of publication
+2. 'Data Sharing Policy' (Factor)
+    a. No mention 
+    b. Implied
+    c. Mentioned
+    d. Explicitly encouraged
+    e. Required, but not explicitly tied to editorial decisions
+    f. Required as a condition of publication
 
-'Data Citation Policy' (Factor)
-No mention 
-Implied
-Explicitly encouraged
+3. 'Data Citation Policy' (Factor)
+    a. No mention 
+    b. Implied
+    c. Explicitly encouraged
         
     
 Investigators will examine the websites of each journal listed in the doaj_seal_enhanced.csv file to determine whether the data sharing policy is included in the Instructions to Authors. The Coding Framework published by Castro et al (2017) will be applied.
 
 Data file formats and standards
 
-All data retrieved for the DOAJ Seal of Approval are downloaded and stored in the open common separated value (csv) file format.
+All data retrieved for the DOAJ Seal of Approval are downloaded and stored in the open common separated value (`csv`) file format.
 
 All data policies culled from the web sites of the DOAJ seal journals will be saved as .txt files. The data generated by applying Castro et al's (2017) Coding Framework will be stored in csv file format.
 
