@@ -10,12 +10,13 @@ output:
     theme: readable
     toc: yes
     toc_float: yes
+  pdf_document:
+    toc: yes
   word_document:
     toc: yes
-bibliography: 
+bibliography:
 - oajournals.bib
 - packages.bib
-csl: apa
 ---
 
 *****
